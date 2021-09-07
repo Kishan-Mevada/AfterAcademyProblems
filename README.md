@@ -1,4 +1,4 @@
-I have created this project to solve the problems in java which given by after academy. you can visit after acedemy site to learn more.
+I have created this project to solve the problems in java which is given in after academy site. you can visit after acedemy site to learn more.
 
 About After Academy
 
