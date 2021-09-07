@@ -22,7 +22,7 @@ public class ReverseBits {
 		int reverseBit = 0;
 		int size = binary.size()-1;
 		for(int i = size; i >= 0; i--) {
-			if(binary.get(i) != 0) 	reverseBit += binary.get(i) * Math.pow(2,size-i);
+			if(binary.get(i) != 0) 	reverseBit += Math.pow(2,size-i);
 		}
 		return reverseBit;
 	}
