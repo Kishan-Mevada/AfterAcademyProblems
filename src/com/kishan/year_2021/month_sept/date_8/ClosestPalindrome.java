@@ -142,7 +142,7 @@ public class ClosestPalindrome {
 		return true;
 	}
 	public static void main(String[] args) {
-		int num = 122;
+		int num = 9998;
 		System.out.println("Closest Palindrome of " + num + " -> " + closestPalindrome(num));
 		System.out.println("Closest Palindrome of " + num + " -> " + closestPalindrome(""+num));
 	}

@@ -11,7 +11,7 @@ public class ConvertTo9sComplement {
 		char[] numChar = number.toCharArray();
 		for(int i = 0; i < numChar.length; i++) {
 			if(numChar[i] != '.'){
-				numChar[i] = (char)((int)('9') - (int)(numChar[i]) + (int)('0'));
+				numChar[i] = Character.forDigit(9 - Character.getNumericValue(numChar[i]),10);
 			}
 
 		}
