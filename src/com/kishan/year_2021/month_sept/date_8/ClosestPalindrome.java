@@ -55,8 +55,13 @@ public class ClosestPalindrome {
 		if(length % 2 == 1){
 			pal1 = firstHalf + middle + secondHalf;
 			if(middle.equals("0")){
-				String temp = addCarry(firstHalf,-1);
-				pal2 = temp + "9" + reverse(temp);
+				if(firstHalf.length() > 1){
+					String temp = addCarry(firstHalf,-1);
+					pal2 = temp + "9" + reverse(temp);
+				}
+				else{
+					pal2 = "99";
+				}
 			}else{
 				pal2 = firstHalf + (Integer.parseInt(middle) - 1) + secondHalf;
 			}
@@ -137,7 +142,7 @@ public class ClosestPalindrome {
 		return true;
 	}
 	public static void main(String[] args) {
-		int num = 9990068;
+		int num = 122;
 		System.out.println("Closest Palindrome of " + num + " -> " + closestPalindrome(num));
 		System.out.println("Closest Palindrome of " + num + " -> " + closestPalindrome(""+num));
 	}
