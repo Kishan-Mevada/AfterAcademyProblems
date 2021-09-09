@@ -71,7 +71,7 @@ public class ClosestPalindrome {
 			pal1 = firstHalf + secondHalf;
 			String temp = "";
 			int firstHalfLength = firstHalf.length();
-			int lastNumber = Character.getNumericValue(firstHalf.charAt(firstHalfLength - 1) - 1);
+			int lastNumber = Math.abs(Character.getNumericValue(firstHalf.charAt(firstHalfLength - 1) - 1));
 			if(firstHalf.charAt(firstHalfLength -1) == '0'){
 				temp = addCarry(firstHalf,-1);
 			}
@@ -117,13 +117,13 @@ public class ClosestPalindrome {
 			}
 
 			if(length >= 0){
-				chars[length] = (char) (Character.getNumericValue(chars[length]) - 1);
+				chars[length] = Character.forDigit((Character.getNumericValue(chars[length]) - 1),10);
 			}
 		}
 		else{
 			for(int i = chars.length-1; i >= 0; i--) {
 				int value = Character.getNumericValue(chars[i]);
-				chars[i] = (char) ((value + carry) % 10);
+				chars[i] = Character.forDigit(((value + carry) % 10),10);
 				carry = (value + carry) / 10;
 			}
 		}
@@ -137,7 +137,7 @@ public class ClosestPalindrome {
 		return true;
 	}
 	public static void main(String[] args) {
-		int num = 1805225081;
+		int num = 9990068;
 		System.out.println("Closest Palindrome of " + num + " -> " + closestPalindrome(num));
 		System.out.println("Closest Palindrome of " + num + " -> " + closestPalindrome(""+num));
 	}
